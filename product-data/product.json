@@ -1,0 +1,34 @@
+[
+  {
+    "shipping": true,
+    "name": "Best Travel Leather bag",
+    "description": "Your best travel conpanion, to help you carry and manage your stuffs",
+    "tag": "Bag travel",
+
+    "specification": {
+      "model": "Brown, Black",
+      "material": "Leather",
+      "shipping": "true"
+    },
+    "lowPrice": 50,
+    "highPrice": 51,
+    "discountedLowPrice": 42.5,
+    "discountedHighPrice": 43.35
+  },
+  {
+    "shipping": true,
+    "name": "Fine Quality travel Leather bag",
+    "description": "Your best travel conpanion, to help you carry and manage your stuffs",
+    "tag": "Bag travel",
+
+    "specification": {
+      "model": "Brown, Black",
+      "material": "Leather",
+      "shipping": "true"
+    },
+    "lowPrice": 42.3,
+    "highPrice": 42.3,
+    "discountedLowPrice": 35.95,
+    "discountedHighPrice": 35.95
+  }
+]

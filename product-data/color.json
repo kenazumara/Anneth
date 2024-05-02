@@ -1,0 +1,565 @@
+1. "color": [
+  {
+    "color": "black",
+    "quantity": 41,
+    "price": 40,
+    "discountPrice": 38.8,
+    "colourImage": "product-5f34d519883c8c0017f7e2ef-1597297945853-black.jpeg"
+  },
+  {
+    "color": "brown",
+    "quantity": 40,
+    "price": 48.6,
+    "colourImage": "product-5f34d519883c8c0017f7e2ef-1597298035823-brown.jpeg",
+    "discountPrice": 47.14
+  },
+  {
+    "color": "wine",
+    "quantity": 40,
+    "price": 48.6,
+    "colourImage": "product-5f34d519883c8c0017f7e2ef-1597298066831-wine.jpeg",
+    "discountPrice": 47.14
+  },
+  {
+    "color": "purple",
+    "quantity": 41,
+    "price": 48.6,
+    "colourImage": "product-5f34d519883c8c0017f7e2ef-1597298100679-purple.jpeg",
+    "discountPrice": 47.14
+  }
+],
+
+2. "color": [
+  {
+    "color": "black",
+    "quantity": 49,
+    "price": 40,
+    "discountPrice": 31.2,
+    "colourImage": "product-5f34d41a883c8c0017f7e2eb-1597297690309-black.jpeg"
+  },
+  {
+    "color": "red",
+    "quantity": 41,
+    "price": 40,
+    "colourImage": "product-5f34d41a883c8c0017f7e2eb-1597297734679-red.jpeg",
+    "discountPrice": 31.2
+  },
+  {
+    "color": "brown",
+    "quantity": 41,
+    "price": 40,
+    "colourImage": "product-5f34d41a883c8c0017f7e2eb-1597297756045-brown.jpeg",
+    "discountPrice": 31.2
+  }
+],
+
+3. "color": [
+  {
+    "color": "black",
+    "quantity": 44,
+    "price": 43.36,
+    "discountPrice": 40.24,
+    "colourImage": "product-5f3448015e39c50017cdeef2-1597261825921-black.jpeg"
+  },
+  {
+    "color": "purple",
+    "quantity": 41,
+    "price": 45.9,
+    "colourImage": "product-5f3448015e39c50017cdeef2-1597261897540-purple.jpeg",
+    "discountPrice": 42.6
+  },
+  {
+    "color": "brown",
+    "quantity": 41,
+    "price": 45.9,
+    "colourImage": "product-5f3448015e39c50017cdeef2-1597261925666-brown.jpeg",
+    "discountPrice": 42.6
+  },
+  {
+    "color": "red",
+    "quantity": 41,
+    "price": 45.9,
+    "colourImage": "product-5f3448015e39c50017cdeef2-1597261971995-red.jpeg",
+    "discountPrice": 42.6
+  }
+],
+
+4. "color": [
+  {
+    "color": "black",
+    "quantity": 45,
+    "price": 25.44,
+    "discountPrice": 23.61,
+    "colourImage": "product-5f34469d5e39c50017cdeeed-1597261469376-black.jpeg"
+  },
+  {
+    "color": "purple",
+    "quantity": 41,
+    "price": 28,
+    "colourImage": "product-5f34469d5e39c50017cdeeed-1597261543314-purple.jpeg",
+    "discountPrice": 25.98
+  },
+  {
+    "color": "light brown",
+    "quantity": 41,
+    "price": 28,
+    "colourImage": "product-5f34469d5e39c50017cdeeed-1597261572641-light brown.jpeg",
+    "discountPrice": 25.98
+  },
+  {
+    "color": "blue",
+    "quantity": 41,
+    "price": 28,
+    "colourImage": "product-5f34469d5e39c50017cdeeed-1597261625953-blue.jpeg",
+    "discountPrice": 25.98
+  }
+],
+
+5. "color": [
+  {
+    "color": "black",
+    "quantity": 82,
+    "price": 66.5,
+    "discountPrice": 66.5,
+    "colourImage": "product-5f3441ae5e39c50017cdeee5-1597260207135-black.jpeg"
+  },
+  {
+    "color": "purple",
+    "quantity": 41,
+    "price": 66.5,
+    "colourImage": "product-5f3441ae5e39c50017cdeee5-1597260320368-purple.jpeg",
+    "discountPrice": 66.5
+  },
+  {
+    "color": "red",
+    "quantity": 39,
+    "price": 66.5,
+    "colourImage": "product-5f3441ae5e39c50017cdeee5-1597260337526-red.jpeg",
+    "discountPrice": 66.5
+  },
+  {
+    "color": "nude",
+    "quantity": 40,
+    "price": 66.5,
+    "colourImage": "product-5f3441ae5e39c50017cdeee5-1597260366477-nude.jpeg",
+    "discountPrice": 66.5
+  }
+],
+
+6. "color": [
+  {
+    "color": "black",
+    "quantity": 114,
+    "price": 34.5,
+    "discountPrice": 34.5,
+    "colourImage": "product-5f343f7e5e39c50017cdeedf-1597259646933-black.jpeg"
+  },
+  {
+    "color": "purple",
+    "quantity": 110,
+    "price": 34.5,
+    "colourImage": "product-5f343f7e5e39c50017cdeedf-1597259692814-purple.jpeg",
+    "discountPrice": 34.5
+  },
+  {
+    "color": "wine",
+    "quantity": 110,
+    "price": 34.5,
+    "colourImage": "product-5f343f7e5e39c50017cdeedf-1597259710325-wine.jpeg",
+    "discountPrice": 34.5
+  },
+  {
+    "color": "gray",
+    "quantity": 110,
+    "price": 34.5,
+    "colourImage": "product-5f343f7e5e39c50017cdeedf-1597259738170-gray.jpeg",
+    "discountPrice": 34.5
+  },
+  {
+    "color": "brown",
+    "quantity": 110,
+    "price": 34.5,
+    "colourImage": "product-5f343f7e5e39c50017cdeedf-1597259754261-brown.jpeg",
+    "discountPrice": 34.5
+  }
+],
+
+7. "color": [
+  {
+    "color": "black",
+    "quantity": 70,
+    "price": 21,
+    "discountPrice": 21,
+    "colourImage": "product-5f343e5f5e39c50017cdeedb-1597259360146-black.jpeg"
+  },
+  {
+    "color": "blue",
+    "quantity": 42,
+    "price": 21,
+    "colourImage": "product-5f343e5f5e39c50017cdeedb-1597259393099-blue.jpeg",
+    "discountPrice": 21
+  },
+  {
+    "color": "gray",
+    "quantity": 110,
+    "price": 21,
+    "colourImage": "product-5f343e5f5e39c50017cdeedb-1597259428943-gray.jpeg",
+    "discountPrice": 21
+  }
+],
+
+8. "color": [
+  {
+    "color": "brown",
+    "quantity": 50,
+    "price": 57.3,
+    "discountPrice": 50.71,
+    "colourImage": "product-5f343d6e5e39c50017cdeed8-1597259118569-brown.jpeg"
+  },
+  {
+    "color": "black",
+    "quantity": 42,
+    "price": 56.3,
+    "colourImage": "product-5f343d6e5e39c50017cdeed8-1597259142844-black.jpeg",
+    "discountPrice": 49.83
+  }
+],
+
+9. "color": [
+  {
+    "color": "brown",
+    "quantity": 49,
+    "price": 57.3,
+    "discountPrice": 50.71,
+    "colourImage": "product-5f343ce85e39c50017cdeed5-1597258984963-brown.jpeg"
+  },
+  {
+    "color": "black",
+    "quantity": 42,
+    "price": 56.3,
+    "colourImage": "product-5f343ce85e39c50017cdeed5-1597259020145-black.jpeg",
+    "discountPrice": 49.83
+  }
+],
+
+10. "color": [
+  {
+    "color": "light brown",
+    "quantity": 47,
+    "price": 50,
+    "discountPrice": 50,
+    "colourImage": "product-5f343a925e39c50017cdeecd-1597258386957-light brown.jpeg"
+  },
+  {
+    "color": "coffee brown",
+    "quantity": 42,
+    "price": 50,
+    "colourImage": "product-5f343a925e39c50017cdeecd-1597258446219-coffee brown.jpeg",
+    "discountPrice": 50
+  },
+  {
+    "color": "black",
+    "quantity": 42,
+    "price": 52.8,
+    "colourImage": "product-5f343a925e39c50017cdeecd-1597258494901-black.jpeg",
+    "discountPrice": 52.8
+  },
+  {
+    "color": "blue-brown-1",
+    "quantity": 42,
+    "price": 56.3,
+    "colourImage": "product-5f343a925e39c50017cdeecd-1597258563035-blue-brown-1.jpeg",
+    "discountPrice": 56.3
+  },
+  {
+    "color": "blue-brown-2",
+    "quantity": 42,
+    "price": 52.7,
+    "colourImage": "product-5f343a925e39c50017cdeecd-1597258636164-blue-brown-2.jpeg",
+    "discountPrice": 52.7
+  },
+  {
+    "color": "brown-mix",
+    "quantity": 42,
+    "price": 52.7,
+    "colourImage": "product-5f343a925e39c50017cdeecd-1597258743536-brown-mix.jpeg",
+    "discountPrice": 52.7
+  },
+  {
+    "color": "black-brown",
+    "quantity": 42,
+    "price": 56.3,
+    "colourImage": "product-5f343a925e39c50017cdeecd-1597258783833-black-brown.jpeg",
+    "discountPrice": 56.3
+  }
+],
+
+11. "color": [
+  {
+    "color": "brown",
+    "quantity": 36,
+    "price": 50,
+    "discountPrice": 33,
+    "colourImage": "product-5f3437b45e39c50017cdeec8-1597257653233-brown.jpeg"
+  },
+  {
+    "color": "black",
+    "quantity": 42,
+    "price": 50,
+    "colourImage": "product-5f3437b45e39c50017cdeec8-1597257710996-black.jpeg",
+    "discountPrice": 33
+  },
+  {
+    "color": "white",
+    "quantity": 41,
+    "price": 50,
+    "colourImage": "product-5f3437b45e39c50017cdeec8-1597257737837-white.jpeg",
+    "discountPrice": 33
+  },
+  {
+    "color": "blue",
+    "quantity": 42,
+    "price": 50,
+    "colourImage": "product-5f3437b45e39c50017cdeec8-1597257753567-blue.jpeg",
+    "discountPrice": 33
+  }
+],
+
+12. "color": [
+  {
+    "color": "brown",
+    "quantity": 39,
+    "price": 47.2,
+    "discountPrice": 42.01,
+    "colourImage": "product-5f3432ef5e39c50017cdeec6-1597256432771-brown.jpeg"
+  }
+],
+
+13. "color": [
+  {
+    "color": "black",
+    "quantity": 40,
+    "price": 36.4,
+    "discountPrice": 32.4,
+    "colourImage": "product-5f3412d9b698290017019eef-1597248217868-black.jpeg"
+  },
+  {
+    "color": "purple",
+    "quantity": 42,
+    "price": 36.4,
+    "colourImage": "product-5f3412d9b698290017019eef-1597248254132-purple.jpeg",
+    "discountPrice": 32.4
+  }
+],
+
+14. "color": [
+  {
+    "color": "blue",
+    "quantity": 40,
+    "price": 29,
+    "discountPrice": 23.78,
+    "colourImage": "product-5f341063b698290017019eea-1597247587971-blue.jpeg"
+  },
+  {
+    "color": "yellow",
+    "quantity": 42,
+    "price": 29,
+    "colourImage": "product-5f341063b698290017019eea-1597247710497-yellow.jpeg",
+    "discountPrice": 23.78
+  },
+  {
+    "color": "wine",
+    "quantity": 38,
+    "price": 29,
+    "colourImage": "product-5f341063b698290017019eea-1597247770424-wine.jpeg",
+    "discountPrice": 23.78
+  },
+  {
+    "color": "nude",
+    "quantity": 42,
+    "price": 29,
+    "colourImage": "product-5f341063b698290017019eea-1597247809571-nude.jpeg",
+    "discountPrice": 23.78
+  }
+],
+
+15. "color": [
+  {
+    "color": "blue",
+    "quantity": 47,
+    "price": 33.74,
+    "discountPrice": 27.67,
+    "colourImage": "product-5f340dbeb698290017019ee4-1597246911102-blue.jpeg"
+  },
+  {
+    "color": "black",
+    "quantity": 42,
+    "price": 33.74,
+    "colourImage": "product-5f340dbeb698290017019ee4-1597246989565-black.jpeg",
+    "discountPrice": 27.67
+  },
+  {
+    "color": "white",
+    "quantity": 41,
+    "price": 33.74,
+    "colourImage": "product-5f340dbeb698290017019ee4-1597247031957-white.jpeg",
+    "discountPrice": 27.67
+  },
+  {
+    "color": "orange",
+    "quantity": 42,
+    "price": 33.74,
+    "colourImage": "product-5f340dbeb698290017019ee4-1597247081695-orange.jpeg",
+    "discountPrice": 27.67
+  },
+  {
+    "color": "yellow",
+    "quantity": 42,
+    "price": 33.74,
+    "colourImage": "product-5f340dbeb698290017019ee4-1597247227429-yellow.jpeg",
+    "discountPrice": 27.67
+  }
+],
+
+16. "color": [
+  {
+    "color": "blue",
+    "quantity": 46,
+    "price": 18.6,
+    "discountPrice": 18.6,
+    "colourImage": "product-5f340b60b698290017019ee2-1597246305173-blue.jpeg"
+  }
+],
+
+17. "color": [
+  {
+    "color": "col-1",
+    "quantity": 47,
+    "price": 21.3,
+    "discountPrice": 20.23,
+    "colourImage": "product-5f3409b0b698290017019ede-1597245872982-col-1.jpeg"
+  },
+  {
+    "color": "col-2",
+    "quantity": 40,
+    "price": 21.2,
+    "colourImage": "product-5f3409b0b698290017019ede-1597245922049-col-2.jpeg",
+    "discountPrice": 20.14
+  },
+  {
+    "color": "col-3",
+    "quantity": 40,
+    "price": 21.2,
+    "colourImage": "product-5f3409b0b698290017019ede-1597245949776-col-3.jpeg",
+    "discountPrice": 20.14
+  }
+],
+
+18. "color": [
+  {
+    "color": "col-1",
+    "quantity": 50,
+    "price": 21.3,
+    "discountPrice": 20.23,
+    "colourImage": "product-5f340878b698290017019edc-1597245560664-col-1.jpeg"
+  }
+],
+
+19. "color": [
+  {
+    "color": "brown",
+    "quantity": 50,
+    "price": 21.3,
+    "discountPrice": 20.23,
+    "colourImage": "product-5f34074db698290017019ed8-1597245261636-brown.jpeg"
+  }
+],
+
+20. "color": [
+  {
+    "color": "gray",
+    "quantity": 50,
+    "price": 36.2,
+    "discountPrice": 34.39,
+    "colourImage": "product-5f33f9222474270017aebcd8-1597241634641-gray.jpeg"
+  },
+  {
+    "color": "brown",
+    "quantity": 40,
+    "price": 63.5,
+    "colourImage": "product-5f33f9222474270017aebcd8-1597241709672-brown.jpeg",
+    "discountPrice": 60.33
+  }
+],
+
+21. "color": [
+  {
+    "color": "black",
+    "quantity": 50,
+    "price": 63.5,
+    "discountPrice": 63.5,
+    "colourImage": "product-5f33f5112474270017aebcd5-1597240594178-black.jpeg"
+  },
+  {
+    "color": "brown",
+    "quantity": 35,
+    "price": 63.5,
+    "colourImage": "product-5f33f5112474270017aebcd5-1597240787275-brown.jpeg",
+    "discountPrice": 63.5
+  }
+],
+
+22. "color": [
+  {
+    "color": "blue",
+    "quantity": 45,
+    "price": 51,
+    "discountPrice": 43.35,
+    "colourImage": "product-5f33eccb2474270017aebccf-1597238476196-blue.jpeg"
+  },
+  {
+    "color": "black",
+    "quantity": 35,
+    "price": 50,
+    "colourImage": "product-5f33eccb2474270017aebccf-1597238576909-black.jpeg",
+    "discountPrice": 42.5
+  },
+  {
+    "color": "brown",
+    "quantity": 35,
+    "price": 50,
+    "colourImage": "product-5f33eccb2474270017aebccf-1597240386996-brown.jpeg",
+    "discountPrice": 42.5
+  }
+],
+
+23. "color": [
+  {
+    "color": "brown",
+    "quantity": 80,
+    "price": 42.3,
+    "discountPrice": 35.95,
+    "colourImage": "product-5f33a0d6aa1b520017dfcd0f-1597219030962-brown.jpeg"
+  }
+],
+
+24. "color": [
+  {
+   "price": 43.36,
+    "discountPrice": 39.46,
+    "colourImage": "product-5f34494a5e39c50017cdeef7-1597262154890-black.jpeg"
+  }
+],
+
+25. "color": [
+  {
+   "price": 62.4,
+    "discountPrice": 57.91,
+    "colourImage": "product-5f3445aa5e39c50017cdeeea-1597261227151-black.jpeg"
+  },
+  {
+   "price": 68.5,
+    "colourImage": "product-5f3445aa5e39c50017cdeeea-1597261294727-cream.jpeg",
+    "discountPrice": 63.57
+  }
+],

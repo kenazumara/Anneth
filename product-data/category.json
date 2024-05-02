@@ -1,0 +1,355 @@
+[
+  {
+    "name": "Travel Uthecil"
+  },
+  {
+    "name": "women Shoes",
+    "image": "category-5f2872371c89c65205fb3df5-1597191572871.jpeg"
+  },
+  {
+    "name": "Men Shoes",
+    "image": "category-5f28722d1c89c65205fb3df4-1597191481287.jpeg"
+  },
+  {
+    "name": "Men Bags",
+    "image": "category-5f2872091c89c65205fb3df3-1597191402588.jpeg"
+  },
+  {
+    "name": "Womens bag",
+    "image": "category-5f2872031c89c65205fb3df2-1597111377957.jpeg"
+  },
+  {
+    "name": "Children Bags",
+    "image": "category-5f2871f61c89c65205fb3df1-1597191359295.jpeg"
+  },
+  {
+    "name": "Travel Bags",
+    "image": "category-5f2871e31c89c65205fb3df0-1597191264423.jpeg"
+  
+  },
+  {
+    "shipping": true,
+    "name": "Anneth Prez Female Bag",
+    "description": "Elegant and Classy Bag for that royal and modern loom",
+    "tag": "Women's bag",
+    "specification": {
+      "model": "Black, Blue and Purple",
+      "material": "Leather",
+      "shipping": "true"
+    },
+    "lowPrice": 40,
+    "highPrice": 48.6,
+    "discountedLowPrice": 38.8,
+    "discountedHighPrice": 47.14
+  },
+  {
+    "shipping": true,
+    "name": "Anneth Mixin Female Bag",
+    "description": "Elegant and Classy Bag for that royal and modern loom",
+    "tag": "Women's bag",
+    "specification": {
+      "model": "Black, Blue and Purple",
+      "material": "Leather",
+      "shipping": "true"
+    },
+    "lowPrice": 40,
+    "highPrice": 40,
+    "discountedLowPrice": 31.2,
+    "discountedHighPrice": 31.2
+  },
+  
+  {
+    "shipping": true,
+    "name": "Anneth Phantrox Female Bag",
+    "description": "Elegant and Classy Bag for that royal and modern loom",
+    "tag": "Women's bag",
+    "specification": {
+      "model": "Black, Blue and Purple",
+      "material": "Leather",
+      "shipping": "true"
+    },
+    "lowPrice": 43.36,
+    "highPrice": 43.36,
+    "discountedLowPrice": 39.46,
+    "discountedHighPrice": 39.46
+  },
+  {
+    "shipping": true,
+    "name": "Anneth Marvel-Pro Female Bag",
+    "description": "Elegant and Classy Bag for that royal and modern loom",
+    "tag": "Women's bag",
+    "specification": {
+      "model": "Black, Blue and Purple",
+      "material": "Leather",
+      "shipping": "true"
+    },
+    "lowPrice": 43.36,
+    "highPrice": 45.9,
+    "discountedLowPrice": 40.24,
+    "discountedHighPrice": 42.6
+  },
+  {
+    "shipping": true,
+    "name": "Anneth Marvel Female Bag",
+    "description": "Elegant and Classy Bag for that royal and modern loom",
+    "tag": "Women's bag",
+    "specification": {
+      "model": "Black, Blue and Purple",
+      "material": "Leather",
+      "shipping": "true"
+    },
+    "lowPrice": 25.44,
+    "highPrice": 28,
+    "discountedLowPrice": 23.61,
+    "discountedHighPrice": 25.98
+  },
+  {
+    "shipping": true,
+    "name": "Anneth Pyravibe Female Bag",
+    "description": "Elegant and Classy Bag for that royal and modern loom",
+    "tag": "Women's bag",
+
+    "specification": {
+      "model": "Black, Blue and Purple",
+      "material": "Leather",
+      "shipping": "true"
+    },
+    "lowPrice": 62.4,
+    "highPrice": 68.5,
+    "discountedLowPrice": 57.91,
+    "discountedHighPrice": 63.57
+  },{
+    "shipping": true,
+    "name": "Anneth Vibe Female Bag",
+    "description": "Elegant and Classy Bag for that royal and modern loom",
+    "tag": "Women's bag",
+    "specification": {
+      "model": "Black, Blue and Purple",
+      "material": "Leather",
+      "shipping": "true"
+    },
+    "lowPrice": 66.5,
+    "highPrice": 66.5,
+    "discountedLowPrice": 66.5,
+    "discountedHighPrice": 66.5
+  },
+  {
+    "shipping": true,
+    "name": "AKS Rosvil Female Bag",
+    "description": "Elegant and Classy shoe",
+    "tag": "Women's bag",
+    "specification": {
+      "model": "Black, Blue and Purple",
+      "material": "Leather",
+      "shipping": "true"
+    },
+    "lowPrice": 34.5,
+    "highPrice": 34.5,
+    "discountedLowPrice": 34.5,
+    "discountedHighPrice": 34.5
+  },
+     
+  {
+    "shipping": true,
+    "name": "AKS Roll Mens Bag",
+    "description": "Elegant and Classy shoe",
+    "tag": "Mens bag",
+
+    "specification": {
+      "model": "Black, Blue ang Gray",
+      "material": "Leather",
+      "shipping": "true"
+    },
+    "lowPrice": 21,
+    "highPrice": 21,
+    "discountedLowPrice": 21,
+    "discountedHighPrice": 21
+  },
+  {
+    "shipping": true,
+    "name": "AKS Roll Mens Canvas  shoes",
+    "description": "Elegant and Classy shoe",
+    "tag": "Mens shoe Canvas",
+
+    "specification": {
+      "model": "White",
+      "material": "Leather",
+      "shipping": "true"
+    },
+    "lowPrice": 56.3,
+    "highPrice": 57.3,
+    "discountedLowPrice": 49.83,
+    "discountedHighPrice": 50.71
+  },
+  {
+    "shipping": true,
+    "name": "AKS Nutches Mens Oxford  shoes",
+    "description": "Elegant and Classy shoe",
+    "tag": "Mens shoe Oxford",
+
+    "specification": {
+      "model": "Black or Brown",
+      "material": "Leather",
+      "shipping": "true"
+    },
+    "lowPrice": 56.3,
+    "highPrice": 57.3,
+    "discountedLowPrice": 49.83,
+    "discountedHighPrice": 50.71
+  },
+  {
+    "shipping": true,
+    "name": "AKS Top Nutch Oxford  shoes",
+    "description": "Elegant and Classy shoe",
+    "tag": "Mens shoe Oxford",
+    "specification": {
+      "model": "Multi-colours",
+      "material": "Leather",
+      "shipping": "true"
+    },
+    "lowPrice": 50,
+    "highPrice": 56.3,
+    "discountedLowPrice": 50,
+    "discountedHighPrice": 56.3
+  },
+  
+  {
+    "shipping": true,
+    "name": "AKS Vanmil Oxford  shoes",
+    "description": "Elegant and Classy shoe",
+    "tag": "Mens shoe Oxford",
+
+    "specification": {
+      "model": "Multi-colours",
+      "material": "Leather",
+      "shipping": "true"
+    },
+    "lowPrice": 50,
+    "highPrice": 50,
+    "discountedLowPrice": 33,
+    "discountedHighPrice": 33
+  },
+  {
+    "shipping": true,
+    "name": "AKS Brown Oxford  shoes",
+    "description": "Elegant and Classy shoe",
+    "tag": "Mens shoe Canvas",
+
+    "lowPrice": 47.2,
+    "highPrice": 47.2,
+    "discountedLowPrice": 42.01,
+    "discountedHighPrice": 42.01
+  },
+  {
+    "shipping": true,
+    "name": "AKS Female Canvas shoes",
+    "description": "Elegant and Classy shoe",
+    "tag": "Ladies shoe Canvas",
+
+    "lowPrice": 36.4,
+    "highPrice": 36.4,
+    "discountedLowPrice": 32.4,
+    "discountedHighPrice": 32.4
+  },
+  
+  {
+    "shipping": true,
+    "name": "AKS Low-Flat Ladies Sandal shoes",
+    "description": "Elegant and Classy shoe",
+    "tag": "Ladies shoe sandal",
+
+    "lowPrice": 29,
+    "highPrice": 29,
+    "discountedLowPrice": 23.78,
+    "discountedHighPrice": 23.78
+  },
+  {
+    "shipping": true,
+    "name": "AKS Low-Flat Ladies shoes",
+    "description": "Elegant and Classy shoe",
+    "tag": "Ladies shoe",
+
+    "lowPrice": 33.74,
+    "highPrice": 33.74,
+    "discountedLowPrice": 27.67,
+    "discountedHighPrice": 27.67
+  },
+  
+  {
+    "shipping": true,
+    "name": "Spider Man Children Bag",
+    "description": "Beautiful, colourful and exciting bags for children",
+    "tag": "Bag children mickey",
+
+    "lowPrice": 18.6,
+    "highPrice": 18.6,
+    "discountedLowPrice": 18.6,
+    "discountedHighPrice": 18.6
+  },
+  {
+    "shipping": true,
+    "name": "Mickey Children B",
+    "description": "Beautiful, colourful and exciting Bs for children",
+    "tag": "Bag children mickey",
+
+    "lowPrice": 21.2,
+    "highPrice": 21.3,
+    "discountedLowPrice": 20.14,
+    "discountedHighPrice": 20.23
+  },
+  
+  {
+    "shipping": true,
+    "name": "Mickey Mouse Children Bag",
+    "description": "Beautiful, colourful and exciting bags for children",
+    "tag": "Bag children",
+
+    "lowPrice": 21.3,
+    "highPrice": 21.3,
+    "discountedLowPrice": 20.23,
+    "discountedHighPrice": 20.23
+  },
+  {
+    "shipping": true,
+    "name": "Female Children Bag",
+    "description": "Beautiful, colourful and exciting bags for children",
+    "tag": "Bag children",
+
+    "lowPrice": 21.3,
+    "highPrice": 21.3,
+    "discountedLowPrice": 20.23,
+    "discountedHighPrice": 20.23
+  },
+  {
+    "shipping": true,
+    "name": "Camp Travel bag",
+    "description": "Your best travel conpanion, to help you carry and manage your stuffs",
+    "tag": "Bag travel camp",
+
+    "specification": {
+      "model": "Brown, Gray",
+      "material": "Leather",
+      "shipping": "true"
+    },
+    "lowPrice": 36.2,
+    "highPrice": 63.5,
+    "discountedLowPrice": 34.39,
+    "discountedHighPrice": 60.33
+  },
+  {
+    "shipping": true,
+    "name": "New arrival Travel Leather bag",
+    "description": "Your best travel conpanion, to help you carry and manage your stuffs",
+    "tag": "Bag travel",
+
+    "specification": {
+      "model": "Brown, Black",
+      "material": "Leather",
+      "shipping": "true"
+    },
+    "lowPrice": 63.5,
+    "highPrice": 63.5,
+    "discountedLowPrice": 63.5,
+    "discountedHighPrice": 63.5
+  }
+]
