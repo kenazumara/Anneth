@@ -22,7 +22,13 @@ router.patch('/updateUser', userController.getme, userController.updateUser);
 
 router.delete('/deleteUser', userController.deleteUser);
 
-router.patch('/updateMe', userController.getme, userController.userPhotoUpload, userController.resizeUserPhoto, userController.updateMe);
+router.patch(
+  '/updateMe',
+  userController.getme,
+  userController.userPhotoUpload,
+  userController.resizeUserPhoto,
+  userController.updateMe,
+);
 
 router.delete(
   '/removeUser/:id',
@@ -38,8 +44,11 @@ router.patch(
 
 router
   .route('/address')
-  .post(authController.protect, userController.createAddress)
-  .get( authController.protect, userController.getAddress);
+  .post(authController.protect, userController.createAddress);
+
+router
+  .route('/:userId/address')
+  .get(authController.protect, userController.getAddress);
 
 router.delete(
   '/address/:id',
@@ -49,22 +58,21 @@ router.delete(
 
 router.post(
   '/create-cart',
-  authController.protect,
-  userController.createUserCart,
+  // authController.protect,
+  userController.addCart,
+);
+router.put(
+  '/update-cart',
+  // authController.protect,
+  userController.updateCart,
 );
 
-router.get(
+router.put(
   '/get-cart',
-  authController.protect,
+  // authController.protect,
   userController.getUserCart,
 );
-router.delete(
-  '/empty-cart',
-  authController.protect,
-  userController.emptyCart,
-);
-
-
+router.delete('/empty-cart', authController.protect, userController.emptyCart);
 
 router.use('/:userId/reviews', reviewRouter);
 
