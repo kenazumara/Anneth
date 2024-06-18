@@ -1,33 +1,43 @@
-const mongoose = require("mongoose"); // Erase if already required
+const mongoose = require('mongoose'); // Erase if already required
 
 // Declare the Schema of the Mongo model
 const cartSchema = new mongoose.Schema(
   {
-    products: [
+    items: [
       {
         product: {
           type: mongoose.Schema.Types.ObjectId,
-          ref: "Product",
+          ref: 'Product',
         },
         quantity: Number,
         color: String,
         price: Number,
+        discountPrice: Number,
         name: String,
+        description: String,
         image: String,
-        // colorId: String
+        maxQuantity: Number,
+        // id: String
       },
     ],
+    cartSubtotal: Number,
+    deliveryFee: {
+      type: Number,
+      set: (v) => parseFloat(v.toFixed(2)),
+    },
     cartTotal: Number,
+    totalQuantityOrdered: Number,
     totalAfterDiscount: Number,
     orderby: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
+      ref: 'User',
     },
   },
   {
     timestamps: true,
-  }
+  },
 );
 
 //Export the model
-module.exports = mongoose.model("Cart", cartSchema);
+module.exports = mongoose.model('Cart', cartSchema);
+
