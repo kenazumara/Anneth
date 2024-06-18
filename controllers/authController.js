@@ -13,15 +13,18 @@ const signToken = (id) => jwt.sign({ id }, process.env.JWT_SECRET);
 const getToken = (user, statusCode, res) => {
   const token = signToken(user._id);
 
-  const cookieOption = {
+  const cookieOptions = {
     expires: new Date(
       Date.now() + process.env.JWT_COOKIE_EXPIRES * 24 * 60 * 60 * 1000,
     ),
     httpOnly: true,
+    secure: process.env.NODE_ENV === 'production', // Use secure cookies in production
+    sameSite: 'None', // Adjust according to your needs
   };
-  if (process.env.NODE_ENV === 'production') cookieOption.secure = true;
 
-  res.cookie('jwt', token, cookieOption);
+  if (process.env.NODE_ENV === 'production') cookieOptions.secure = true;
+
+  res.cookie('jwt', token, cookieOptions);
 
   user.password = undefined;
 
@@ -38,9 +41,11 @@ exports.signUp = asyncHandler(async (req, res, next) => {
 
   if (!findUser) {
     const user = await User.create({
-      name: req.body.name,
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
       email: req.body.email,
       password: req.body.password,
+      phone: req.body.phone,
       confirmPassword: req.body.confirmPassword,
       role: req.body.role,
     });
@@ -52,9 +57,10 @@ exports.signUp = asyncHandler(async (req, res, next) => {
     const url = `${req.protocol}://${req.get('host')}/api/v1/user/getUser`;
 
     await new SendEmail(user, url).sendWelcome();
+
     getToken(user, 201, res);
   } else {
-    return next(new AppError('User already exists', 404));
+    return next(new AppError('User already exists with this email', 404));
   }
 });
 
@@ -73,18 +79,6 @@ exports.login = asyncHandler(async (req, res, next) => {
   ) {
     const currentTime = new Date().getTime();
     const timeDifferenceInMilliseconds = currentTime - user.passwordChangedAt;
-    // const timeDifferenceInDays = `${Math.floor(
-    //   timeDifferenceInMilliseconds / (1000 * 60 * 60 * 24),
-    // )} days`;
-    // const timeDifferenceInMinutes = `${Math.floor(timeDifferenceInMilliseconds / (1000 * 60))} minutes`;
-    // const timeDifferenceInHours = `${Math.floor(timeDifferenceInMilliseconds / (1000 * 60 * 60))} hours`;
-    // const timeDifferenceInMonths = `${Math.floor(timeDifferenceInMilliseconds / (1000 * 60 * 60 * 24 * 31))} months`;
-    // return next(
-    //   new AppError(
-    //     `Password was changed ${timeDifferenceInMilliseconds < 3600000 ? timeDifferenceInMinutes : timeDifferenceInMilliseconds >= 3600000 && timeDifferenceInMilliseconds < 86400000 ? timeDifferenceInHours : timeDifferenceInMilliseconds >= 86400000 && timeDifferenceInMilliseconds < 2678400000 ? timeDifferenceInDays : timeDifferenceInMilliseconds >= 2678400000 ? timeDifferenceInMonths : timeDifferenceInMonths} ago. Please enter your new password`,
-    //     401,
-    //   ),
-    // );
 
     let timeDifferenceFormatted;
     if (timeDifferenceInMilliseconds < 3600000) {
@@ -113,6 +107,7 @@ exports.login = asyncHandler(async (req, res, next) => {
   }
 
   getToken(user, 200, res);
+  // req.session.user = user;
 });
 
 exports.logout = (req, res) => {
@@ -125,16 +120,6 @@ exports.logout = (req, res) => {
     message: 'Successfully logged out',
   });
 };
-
-// exports.logout = (req, res) => {
-//   res.clearCookie('jwt', '', {
-//     httpOnly: true,
-//   });
-//   res.status(200).json({
-//     status: 'success',
-//     message: 'Successfully logged out',
-//   });
-// };
 
 exports.protect = catchAsync(async (req, res, next) => {
   const authToken = req.headers.authorization;
@@ -174,7 +159,6 @@ exports.protect = catchAsync(async (req, res, next) => {
     );
   }
 
-  // GRANT ACCESS TO PROTECTED ROUTE
   req.user = currentUser;
   next();
 });
@@ -237,9 +221,6 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
     passwordResetExpires: { $gt: Date.now() },
   });
 
-  // const user = await User.findOne({ passwordResetToken: hashedToken });
-  // const time = Date.now();
-  // console.log(user);
   if (!user)
     return next(
       new AppError('Password reset token is invalid or has expired', 400),
