@@ -19,6 +19,7 @@ exports.getAll = (Model, projection) =>
 
     // const data = await features.query.explain();
     const data = await features.query;
+    if(!data || data.length === 0) return next(new AppError(`no record(s) found`))
 
     if (req.stat && req.stat > 0) {
       data.forEach((item, i) => {
@@ -51,30 +52,37 @@ exports.getAll = (Model, projection) =>
     });
   });
 
-exports.getOne = (Model, populateOpt = null) =>
-  asyncHandler(async (req, res, next) => {
-    const data = await Model.findById(req.params.id).populate(populateOpt);
-
-    if (!data) return next(new AppError('No document with id found!', 404));
-    const reviewStats = calculateReviewStats(data.reviews);
-    // Update product with reviewStats
-    data.reviewStat = reviewStats;
-
-    if (req.stat) {
-      // Update data object with ratingsQuantity and ratingsAverage
-      data.ratingsQuantity = req.stat[0].ratingsQuantity;
-      data.ratingsAverage = req.stat[0].ratingsAverage.toFixed(0);
-    }
-
-    req.data = data;
-
-    res.status(200).json({
-      status: 'success',
-      data: {
-        data,
-      },
+  exports.getOne = (Model, populateOpt = null) =>
+    asyncHandler(async (req, res, next) => {
+      const query = Model.findById(req.params.id);
+      
+      if (populateOpt) query.populate(populateOpt);
+  
+      const data = await query;
+  
+      if (!data) return next(new AppError('No document with id found!', 404));
+  
+      // Assuming calculateReviewStats is defined elsewhere
+      if (data.reviews) {
+        const reviewStats = calculateReviewStats(data.reviews);
+        data.reviewStat = reviewStats;
+      }
+  
+      if (req.stat) {
+        data.ratingsQuantity = req.stat[0].ratingsQuantity || 0;
+        data.ratingsAverage = req.stat[0].ratingsAverage.toFixed(0) || '0';
+      }
+  
+      req.data = data;
+  
+      res.status(200).json({
+        status: 'success',
+        data: {
+          data,
+        },
+      });
     });
-  });
+  
 
 exports.createOne = (Model) =>
   catchAsync(async (req, res, next) => {
@@ -90,14 +98,6 @@ exports.createOne = (Model) =>
 
 exports.updateOne = (Model) =>
   catchAsync(async (req, res, next) => {
-    // let fieldBody;
-    // if (req.params.colorId) {
-    //   console.log(req.params.colorId)
-    //   fieldBody = req.body
-    //   // fieldBody = { $pull: { color: { _id: req.params.colorId } }, body: req.body};
-    // } else {
-    //   fieldBody = req.body;
-    // }
     let data
 
     if(req.params.colorId){
@@ -108,7 +108,6 @@ exports.updateOne = (Model) =>
             "color.$[elem].color": req.body.color,
             "color.$[elem].quantity": req.body.quantity,
             "color.$[elem].discountPrice": req.body.discountPrice,
-            // Add more fields as needed
           }
         },
         {
@@ -158,71 +157,23 @@ function calculateReviewStats(reviews) {
     star5: 0,
   };
 
-  // Iterate through reviews and count ratings for each star
-  reviews.forEach((review) => {
-    if (review.rating === 1) {
-      reviewStats.star1++;
-    } else if (review.rating === 2) {
-      reviewStats.star2++;
-    } else if (review.rating === 3) {
-      reviewStats.star3++;
-    } else if (review.rating === 4) {
-      reviewStats.star4++;
-    } else if (review.rating === 5) {
-      reviewStats.star5++;
-    }
-  });
-
-  return reviewStats;
+  if(reviews){
+    // Iterate through reviews and count ratings for each star
+    reviews.forEach((review) => {
+      if (review.rating === 1) {
+        reviewStats.star1++;
+      } else if (review.rating === 2) {
+        reviewStats.star2++;
+      } else if (review.rating === 3) {
+        reviewStats.star3++;
+      } else if (review.rating === 4) {
+        reviewStats.star4++;
+      } else if (review.rating === 5) {
+        reviewStats.star5++;
+      }
+    });
+  
+    return reviewStats;
+  }
 }
 
-// // FILTER OUT OTHER ELEMENTS FROM REQ.QUERY OBJECT
-// const queryObj = { ...req.query };
-// const excludeEl = ['sort', 'page', 'limit', 'fields'];
-// excludeEl.forEach((el) => delete queryObj[el]);
-
-// // ADDING '$' TO MONGO OPERATORS (FILTERING)
-// let queryStr = JSON.stringify(queryObj);
-// queryStr = queryStr.replace(/\b(gte|lt|lte)\b/g, (match) => `$${match}`);
-// const queryObj1 = JSON.parse(queryStr);
-
-// // LOOP THROUGH QUERY.OBJ TO CONVERT STRINGED-NUMBERS TO NUMBERS (FILTERING)
-// Object.keys(queryObj1).forEach((key) => {
-//   if (!isNaN(queryObj1[key])) {
-//     queryObj1[key] = parseFloat(queryObj1[key]);
-//   }
-// });
-
-// if (req.query) filter = queryObj1;
-
-// let query = Model.find(filter, projection).APIFeatures;
-
-// SORTING
-//   if (req.query.sort) {
-//     const sortBy = req.query.sort.split(',').join(' ');
-//     query = query.sort(sortBy);
-//   } else {
-//     query.sort('-createdAt');
-//   }
-
-//   // LIMITING FIELDS
-// if (req.query.fields) {
-//   const fields = req.query.fields.split(',').join(' ');
-//   query = query.select(fields);
-// } else {
-//   query = query.select('-__v');
-// }
-
-//   // PAGINATION
-//   const page = req.query.page * 1 || 1;
-//   const limit = req.query.limit * 1 || 10;
-//   const skip = (page - 1) * limit;
-
-//   if(req.query.page ) {
-//     const docNumber = await Model.countDocuments()
-//     if(skip > docNumber) {
-//    throw new Error ('No page found')
-//   }
-//   console.log(docNumber)
-// }
-// query = query.skip(skip).limit(limit)
