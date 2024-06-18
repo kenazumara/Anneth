@@ -7,8 +7,8 @@ const router = express.Router();
 
 
 router
-  .route('/checkout-session/:productId')
-  .get(authController.protect, cartController.checkoutSession, cartController.qtySold );
+  .route('/checkout-session')
+  .post(authController.protect, cartController.checkoutSession, cartController.qtySold );
 
 router.route('/').get(authController.protect, cartController.allOrders)
 
