@@ -1,4 +1,4 @@
-const mongoose = require('mongoose'); // Erase if already required
+const mongoose = require('mongoose'); 
 
 const addressSchema = new mongoose.Schema({
   street: { type: String, required: true },
@@ -7,9 +7,12 @@ const addressSchema = new mongoose.Schema({
   zip: { type: String },
   country: { type: String, required: true },
   user: {
-    type: mongoose.Schema.Types.ObjectId,
+    type: mongoose.Schema.ObjectId,
     ref: 'User',
+    required: [true, 'An address must have a user'],
   },
 });
 
-module.exports = mongoose.model('Address', addressSchema);
+const Address = mongoose.model('Address', addressSchema);
+
+module.exports = Address;
