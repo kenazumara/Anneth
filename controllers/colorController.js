@@ -75,19 +75,7 @@ exports.createColor = catchAsync(async (req, res, next) => {
     const color = await Color.create(newColor);
     product.color.push(color);
   }
-
-  // colors.forEach(async (colorData) => {
-  //   const newColor = {
-  //     color: colorData.color,
-  //     quantity: colorData.quantity,
-  //     discountPrice: colorData.discountPrice,
-  //   };
-
-  //   // Create the color and add it to the product
-  //   const color = await Color.create(newColor);
-  //   product.color.push(color);
-  // });
-
+  
   req.product = product;
   next();
 });
