@@ -5,9 +5,9 @@ const { convert } = require('html-to-text');
 const emailHandler = class Email {
   constructor(user, url) {
     this.to = user.email;
-    this.firstName = user.name.split(' ')[0],
+    this.firstName = user.firstName;
     this.url = url;
-    this.from = `Anneth <${process.env.EMAIL_FROM}>`,
+    this.from = `Anneth <${process.env.EMAIL_FROM}>`;
     this.address = process.env.JWT_ADDRESS
   }
 
