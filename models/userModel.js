@@ -3,76 +3,89 @@ const bcrypt = require('bcrypt');
 const crypto = require('crypto');
 const validator = require('validator');
 
-const userSchema = mongoose.Schema({
-  name: {
-    type: String,
-    required: [true, 'Name is required'],
-  },
-  email: {
-    type: String,
-    required: [true, 'Please enter a valid email address'],
-    unique: true,
-    lowercase: true,
-    validate: [validator.isEmail, 'Please enter a valid email address'],
-  },
-  phone: {
-    type: Number,
-    // required: [true, 'Please enter your phone number'],
-    unique: true,
-  },
-  password: {
-    type: String,
-    required: [true, 'Password is required'],
-    trim: true,
-    minLength: 8,
-    select: false,
-  },
-  confirmPassword: {
-    type: String,
-    required: [true, 'Password confirm is required'],
-    trim: true,
-    validate: {
-      // works only on create() nd save()
-      validator: function (val) {
-        return val === this.password;
-      },
-      message: 'Passwords do not match',
+const userSchema = mongoose.Schema(
+  {
+    firstName: {
+      type: String,
+      required: [true, 'first name is required'],
     },
-  },
-  currentPassword: String,
-  passwordChangedAt: Date,
-  passwordResetToken: String,
-  passwordResetExpires: Date,
-  role: {
-    type: String,
-    enum: ['user', 'admin'],
-    default: 'user',
-  },
-  photo: {
-    type: String,
-    default: 'default.jpeg',
-  },
-  active: {
-    type: Boolean,
-    default: true,
-    select: false,
-  },
-  reviews: [
-    {
+    lastName: {
+      type: String,
+      required: [true, 'Last name is required'],
+    },
+    gender: {
+      type: String,
+      // required: [true, 'Gender is required (Male or Female)'],
+      // enum: ['male', 'female'],
+    },
+    email: {
+      type: String,
+      required: [true, 'Please enter a valid email address'],
+      unique: true,
+      lowercase: true,
+      validate: [validator.isEmail, 'Please enter a valid email address'],
+    },
+    phone: {
+      type: Number,
+      required: [true, 'Please enter your phone number'],
+      unique: true,
+    },
+    password: {
+      type: String,
+      required: [true, 'Password is required'],
+      trim: true,
+      minLength: 8,
+      select: false,
+    },
+    confirmPassword: {
+      type: String,
+      required: [true, 'Password confirm is required'],
+      trim: true,
+      validate: {
+        // works only on create() nd save()
+        validator: function (val) {
+          return val === this.password;
+        },
+        message: 'Passwords do not match',
+      },
+    },
+    currentPassword: String,
+    passwordChangedAt: Date,
+    passwordResetToken: String,
+    passwordResetExpires: Date,
+    role: {
+      type: String,
+      enum: ['user', 'admin'],
+      default: 'user',
+    },
+    photo: {
+      type: String,
+      default: 'default.jpeg',
+    },
+    active: {
+      type: Boolean,
+      default: true,
+      select: false,
+    },
+    reviews: {
       type: mongoose.Schema.ObjectId,
       ref: 'Review',
     },
-  ],
-  product: [
-    {
+    product: {
       type: mongoose.Schema.ObjectId,
       ref: 'Product',
     },
-  ],
-  address: {
-    type: mongoose.Schema.ObjectId,
-    ref: 'Address',
   },
+  {
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true },
+  },
+);
+
+userSchema.virtual('addresses', {
+  ref: 'Address',
+  localField: '_id',
+  foreignField: 'user',
 });
 
 // Encrypting the password
