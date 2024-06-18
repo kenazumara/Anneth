@@ -28,7 +28,6 @@ const sendErrorProd = (err, res) => {
     // HANDLE DUPLICATE FIELDS ERROR
   } else if (err.code === 11000) {
     const value = err.message.match(/{([^}]*)}/)[1];
-    console.log(value);
     res.status(400).json({
       status: err.status,
       message: `${value} already exist, please use another`,
