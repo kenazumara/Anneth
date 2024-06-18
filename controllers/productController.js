@@ -116,11 +116,6 @@ exports.resizeProductImages = catchAsync(async (req, res, next) => {
       req.product.id
     }-${Date.now()}-cover.jpeg`;
 
-    // await sharp(req.files.imageCover[0].buffer)
-    //   .resize(250, 250)
-    //   .toFormat('jpeg')
-    //   .jpeg({ quality: 90 })
-    //   .toFile(`public/img/product/250x250_${req.product.imageCover}`);
     const clonedBuffer = Buffer.from(req.files.imageCover[0].buffer);
 
     // Resize and save the 800x800 image
@@ -224,11 +219,6 @@ exports.getProductStat = catchAsync(async (req, res, next) => {
   ]);
 
   req.stat = stats;
-  // res.status(200).json({
-  //   status: 'success',
-  //   data: {
-  //     stats,
-  //   },
-  // });
+
   next();
 });
