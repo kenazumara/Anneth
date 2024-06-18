@@ -1,5 +1,3 @@
-// const AppError = require('../utils/appError')
-
 // DEVELOPMENT ERRORS
 const sendErrorDev = (err, res) => {
   res.status(err.statusCode).json({
@@ -12,6 +10,7 @@ const sendErrorDev = (err, res) => {
 
 const sendErrorProd = (err, res) => {
   // HANDLES ALL APP GENERATED ERRORS
+
   // if (err instanceof AppError) {
   if (err.isOperational) {
     res.status(err.statusCode).json({
@@ -28,10 +27,11 @@ const sendErrorProd = (err, res) => {
 
     // HANDLE DUPLICATE FIELDS ERROR
   } else if (err.code === 11000) {
-    const value = err.message.match(/\"(.*?)\"/)[1];
-    res.status(400).json({ 
+    const value = err.message.match(/{([^}]*)}/)[1];
+    console.log(value);
+    res.status(400).json({
       status: err.status,
-      message: `Field ${value} already exist, please use another name`,
+      message: `${value} already exist, please use another`,
     });
 
     // HADLE VALIDATION ERROR
@@ -79,4 +79,3 @@ module.exports = (err, req, res, next) => {
     sendErrorProd(err, res);
   }
 };
-
