@@ -36,7 +36,7 @@ const reviewSchema = mongoose.Schema({
 reviewSchema.index({ product: 1, user: 1 }, { unique: true });
 
 reviewSchema.pre(/^find/, function (next) {
-  this.populate({ path: 'user', select: '-_id name photo' });
+  this.populate({ path: 'user', select: '-_id firstName lastName photo' });
 
   next();
 });
@@ -82,54 +82,7 @@ reviewSchema.post(/^findOneAnd/, function () {
   this.r.constructor.calcAverage(this.r.product);
 });
 
-
-
 ////////////////////////////////////////////////
-
-// reviewSchema.pre(/^find/, function(next) {
-//   this.r = this.clone().find()
-//   next()
-// })
-
-// reviewSchema.post(/^find/, async function() {
-//   await this.r.constructor.calcAverage(this.r.product)
-// })
-
-// reviewSchema.post('save', function() {
-//   this.r.constructor.calcAverage(this.r.product)
-// })
-
-// reviewSchema.statics.calculateRating = async function (productId) {
-//   const stat = await this.aggregate([
-//     { $match: { product: productId } },
-//     {
-//       $group: {
-//         _id: '$product',
-//         nRating: { $sum: 1 },
-//         nRatingAvg: { $avg: '$rating' },
-//       },
-//     },
-//   ]);
-
-//   console.log(productId, stat);
-// };
-// reviewSchema.post('save', function () {
-//   this.constructor.calculateRating(this.product);
-// });
-
-// reviewSchema.pre(/^findOneAnd/, function (next) {
-//   this.r = this.clone().find();
-
-//   next();
-// });
-
-// reviewSchema.post('save', function() {
-//   this.constructor.calculateRating(this.product)
-// })
-
-// reviewSchema.post(/^findOneAnd/, async function () {
-//   await this.r.constructor.calculateRating(this.r.product);
-// });
 
 const Review = mongoose.model('Review', reviewSchema);
 
